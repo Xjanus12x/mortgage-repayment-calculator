@@ -3,7 +3,6 @@ import MortgageType from "./MortgageType";
 
 type MortgageType = {
   label: string;
-  name: string;
   isRepayment: boolean;
   handleRadioChange: (
     event: React.MouseEvent<HTMLDivElement, MouseEvent>,
@@ -13,7 +12,6 @@ type MortgageType = {
 
 const Type: React.FC<MortgageType> = ({
   label,
-  name,
   isRepayment,
   handleRadioChange,
 }: MortgageType) => {
@@ -34,7 +32,6 @@ const Type: React.FC<MortgageType> = ({
             className="before:content[''] peer relative size-4 cursor-pointer appearance-none rounded-full border border-neutral-slate700 text-primary-lime transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-primary-lime checked:border-2 hover:before:opacity-10 group-checked:bg-primary-lime"
             id={label.toLowerCase()}
             value={label.toLowerCase()}
-            name={name}
             checked={isRepayment}
             onChange={() => {}}
           />
