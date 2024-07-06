@@ -37,13 +37,11 @@ const MortgageType: React.FC<MortgageTypeProps> = ({ dispatcher, state }) => {
       <span className="header">Morgage Type</span>
       <Type
         label="Repayment"
-        name="mortgage-type"
         isRepayment={mortgageType === "Repayment" && state.value !== ""}
         handleRadioChange={handleRadioChange}
       />
       <Type
         label="Interest only"
-        name="mortgage-type"
         isRepayment={mortgageType === "Interest only" && state.value !== ""}
         handleRadioChange={handleRadioChange}
       />
